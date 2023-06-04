@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+}
+
+.container{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50svh;
+
+}
+.card-contain{
+    height: 100%;
+}
+h1,h3,h4,p{
+    text-align: center;
+    
+}
+
+/* .car {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+    animation: carMove 4s linear infinite;
+  }
+  
+  .car::before,
+  .car::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 10px;
+    background-color: white;
+    border-radius: 60%;
+  }
+  
+  .car::before {
+    left: 10px;
+  }
+  
+  .car::after {
+    right: 10px;
+  }
+  
+  @keyframes carMove {
+    0% { left: 0; }
+    100% { left: calc(100% - 100px); }
+  } */
+
+input{
+    
+    padding: 10px;
+    border-radius: 40px;
+    width: 80%;
+}
+
+button{
+    height: 2.5rem;
+    border-radius: 40px;
+    width: 5rem;
+    background-color: blue;
+    color: white;
+    
+}
+#pin-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#locator{
+    align-self: center;
+    height: 4rem;
+    border-radius: 30px;
+    width: 10rem;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+
+#result-container{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+    padding: 2rem
+}
+
+#result-box{
+    display: flex;
+}
+
+#address-of-business,#business-rating,#business-status {
+text-align: left;
+font-size: 1rem;
+
+}
+
+#business-status{
+    color: green;
+}
+img{
+    width: 7rem;
+    height: 7rem;
+}
+#name-of-business{
+    text-align: left;
+    font-size: 2rem;
+}
