@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 
 app.use(cors({
-  origin: ["http://127.0.0.1:5500/", "https://baouldguyd.github.io/fuel-location/"]
+  origin: ["http://127.0.0.1:5502/", "https://fuel-location.vercel.app/"]
 }));
 
 
