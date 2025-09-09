@@ -1,7 +1,3 @@
-import dotenv from "dotenv";
-
-dotenv.config();
-
 let locationInput = document.querySelector("#location-search");
 let searchButton = document.querySelector("#search-button");
 const resultsContainer = document.getElementById('result-container');
