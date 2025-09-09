@@ -1,16 +1,20 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
 let locationInput = document.querySelector("#location-search");
 let searchButton = document.querySelector("#search-button");
 const resultsContainer = document.getElementById('result-container');
 let searchAddress = document.querySelector("#search-address");
 const locationButton = document.querySelector("#locator");
-const apiKey = "&key=AIzaSyBbcjvUPEv3IaVsCDzDxQF_GYDL_52_TF4";
+const baseURL = window.BASE_URL;
+
 
 
 const searchResults = () => {
   locationInput.addEventListener("keypress", () => {
-    let apiUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=";
     let locationEntered = locationInput.value;
-    const locationUrl = apiUrl + locationEntered + apiKey;
+    const locationUrl = `${baseURL}/geocode?address=${encodeURIComponent(locationEntered)}`;
 
     const getUserLocation = () => {
       fetch(locationUrl)
@@ -28,7 +32,7 @@ const searchResults = () => {
           searchAddress.textContent = "Ready to fetch the list of petrol station in " + fullAddress + " please click the Search Button to display results";
 
           searchButton.addEventListener("click", () => {
-            const requiredApiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat +"," + lng +`&radius=5000&types=gas_station&rankBy=distance&sensor=true${apiKey}`;
+            const requiredApiURL = `${baseURL}/nearby?lat=${lat}&lng=${lng}`;
 
             const userCoord = () => {
               fetch(requiredApiURL)
@@ -80,10 +84,7 @@ locationButton.addEventListener("click", () => {
       let lat = position.coords.latitude;
       let lng = position.coords.longitude;
 
-      const requiredApiURL =
-        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
-        lat + "," + lng +
-        `&radius=5000&types=gas_station&rankBy=distance&sensor=true${apiKey}`;
+      const requiredApiURL = `${baseURL}/nearby?lat=${lat}&lng=${lng}`;
 
       // Haversine formula function
       function haversineDistance(lat1, lon1, lat2, lon2) {

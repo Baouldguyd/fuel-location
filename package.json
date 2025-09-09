@@ -1,0 +1,28 @@
+{
+  "name": "fuel-location",
+  "version": "1.0.0",
+  "description": "This app allows you to check the list of petrol stations depending on the location you desire.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baouldguyd/fuel-location.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Baouldguyd/fuel-location/issues"
+  },
+  "homepage": "https://github.com/Baouldguyd/fuel-location#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "node-fetch": "^2.7.0"
+  }
+}
