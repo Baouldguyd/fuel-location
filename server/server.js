@@ -3,14 +3,18 @@ import fetch from "node-fetch";
 import dotenv from "dotenv";
 import cors from "cors";
 
-app.use(cors({
-  origin: ["http://127.0.0.1:5502/", "https://fuel-location.vercel.app/"]
-}));
-
-
 dotenv.config();
 
-const app = express();
+const app = express(); // ✅ initialize app first
+
+// middleware
+app.use(cors({
+  origin: [
+    "http://127.0.0.1:5502",
+    "https://fuel-location.vercel.app"
+  ]
+}));
+app.use(express.json());
 
 app.get("/nearby", async (req, res) => {
   const { lat, lng } = req.query;
