@@ -7,7 +7,7 @@ let searchButton = document.querySelector("#search-button");
 const resultsContainer = document.getElementById('result-container');
 let searchAddress = document.querySelector("#search-address");
 const locationButton = document.querySelector("#locator");
-const baseURL = window.BASE_URL;
+const baseURL = "http://localhost:3000";
 
 
 
